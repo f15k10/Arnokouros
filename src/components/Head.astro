@@ -5,13 +5,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <p>Είσαι στο {title}</p>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Posts</a>
-      <a href="#">Contact</a>
+    <p>Είσαι στο {title} logo</p>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Posts</a>
+        <a href="#">Contact</a>
     </nav>
+    <button id="theme-btn" class="btn btn-outline btn-sm">
+            🌙 Dark Mode
+    </button>
     <body>
 
   </body>
+  
+  <script>
+        const themeBtn = document.getElementById('theme-btn');
+        const htmlElement = document.documentElement;
+
+        themeBtn?.addEventListener('click', () => {
+            // Get the current theme
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            
+            // Switch it
+            if (currentTheme === 'light') {
+                htmlElement.setAttribute('data-theme', 'dark');
+                themeBtn.textContent = '☀️ Light Mode';
+            } else {
+                htmlElement.setAttribute('data-theme', 'light');
+                themeBtn.textContent = '🌙 Dark Mode';
+            }
+        });
+    </script>
 </head>
