@@ -5,19 +5,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <p>Είσαι στο {title} logo</p>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Posts</a>
-        <a href="#">Contact</a>
-    </nav>
-    <button id="theme-btn" class="btn btn-outline btn-sm">
-            🌙 Dark Mode
-    </button>
+    <div class="flex justify-between ...">
+        <div class="order-1 ...">
+            <p>Είσαι στο {title} logo</p>
+        </div>
+        <div class="order-2 ...">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Posts</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+        <div class="order-3 ...">
+                <button id="theme-btn" class="btn btn-outline btn-sm">
+                    🌙 Dark Mode
+                </button> 
+        </div>
+    </div>
     <body>
 
   </body>
-  
+
   <script>
         const themeBtn = document.getElementById('theme-btn');
         const htmlElement = document.documentElement;
