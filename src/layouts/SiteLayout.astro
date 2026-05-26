@@ -1,0 +1,19 @@
+---
+import Head from "../components/Head.astro";
+import Foorer from "../components/Footer.astro";
+
+let {title} = Astro.props;
+
+const changeAction = (content:string) => {
+     title=content
+}
+---
+<html lang="en">
+    <Head title={title}/>
+<body>
+    <article>
+      <slot /> <!-- your content is injected here -->
+    </article>
+    </body>
+    <Foorer/>
+</html>
