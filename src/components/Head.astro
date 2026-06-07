@@ -60,7 +60,6 @@ const { title } = Astro.props;
                 <span class="sr-only">Toggle dark or light mode</span>
             </label>
             <button id="lang-cycle-btn" class="btn btn-ghost btn-circle font-bold text-sm" aria-label="Change language">
-    <!-- This text container will cycle automatically via JavaScript -->
     <span id="lang-label">EN</span>
   </button>
         </div>
@@ -102,12 +101,12 @@ const languages = ['EN', 'GR', 'CN'];
   const langBtn = document.getElementById('lang-cycle-btn');
   const langLabel = document.getElementById('lang-label');
   
-  // Storage for our fetched dictionary values
+
   let translations = {}; 
 
-  // 1. Core function to update data-i18n target strings on screen
+
   const translatePage = (langCode) => {
-    // We convert 'EN'/'GR'/'CN' to lowercase 'en'/'gr'/'cn' to match your JSON keys safely
+
     const key = langCode.toLowerCase(); 
     const elements = document.querySelectorAll('[data-i18n]');
     
@@ -119,36 +118,30 @@ const languages = ['EN', 'GR', 'CN'];
     });
   };
 
-  // 2. Fetch the external locales.json configuration file from public/
+
   async function loadTranslations() {
     try {
       const response = await fetch('/Translate.json');
       translations = await response.json();
-      
-      // Perform translation parsing on initial boot
+ 
       translatePage(languages[currentLangIndex]);
     } catch (error) {
       console.error("Could not load public/locales.json file:", error);
     }
   }
 
-  // Set the initial raw text state inside the text bubble wrapper immediately
   if (langLabel) langLabel.textContent = languages[currentLangIndex];
-  
-  // Kick off the network request asynchronously
+
   loadTranslations();
 
-  // 3. Click handler aligned explicitly with your iteration logic
   langBtn?.addEventListener('click', () => {
     currentLangIndex = (currentLangIndex + 1) % languages.length;
     const newLang = languages[currentLangIndex];
     
     if (langLabel) langLabel.textContent = newLang;
     
-    // Perform screen string translations
     translatePage(newLang);
     
-    // Save state preference choice securely inside the browser storage cluster
     localStorage.setItem('lang', newLang);
   });
 
