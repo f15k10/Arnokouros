@@ -2,16 +2,43 @@
   "en": {
     "Home": "Home",
     "Clothes": "Clothes",
-    "Contact": "Contact"
+    "Contact": "Contact",
+    "Footer_Service": "Service",
+    "Footer_tailor_made" : "Tailor Made",
+    "Footer_suit":"Suit",
+    "Footer_Company":"Company",
+    "Footer_AboutUs" : "About Us",
+    "Footer_Contact" : "Contact",
+    "Footer_Location": "Location",
+    "Footer_Legal" : "Legal",
+    "Footer_Cookie" : "Cookie policy"
   },
   "gr": {
     "Home": "Σπίτι",
     "Clothes": "Ρούχα",
-    "Contact": "Επικοινωνία"
+    "Contact": "Επικοινωνία",
+    "Footer_Service": "Υπηρεσίες",
+    "Footer_tailor_made" : "Ραμμένα",
+    "Footer_suit" : "Κοστούμια",
+    "Footer_Company" : "Εταιρία",
+    "Footer_AboutUs" : "Σχετικά με εμάς",
+    "Footer_Contact" : "Επικοινωνία",
+    "Footer_Location" : "Τοποθεσία",
+    "Footer_Legal" : "Νομικό",
+    "Footer_Cookie":"Πολιτική Cookies"
   },
   "cn": {
     "Home": "家",
     "Clothes": "衣服",
-    "Contact" : "接触"
+    "Contact" : "接触",
+    "Footer_Service" : "服务",
+    "Footer_tailor_made" : "量身定制",
+    "Footer_suit" : "套装",
+    "Footer_Company" : "公司",
+    "Footer_AboutUs" : "关于我们",
+    "Footer_Contact" : "联系",
+    "Footer_Location" : "位置",
+    "Footer_Legal" : "法律",
+    "Footer_Cookie": "Cookie 政策"
   }
 }
